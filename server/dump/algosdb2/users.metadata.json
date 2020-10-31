@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"algosdb.users"}],"uuid":"191cbea4052245ecb3a698603946b3cb"}
