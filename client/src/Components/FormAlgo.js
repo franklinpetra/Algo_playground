@@ -301,7 +301,7 @@ const FormAlgo = props => {
                                 name="code" 
                                 className="form-control"
                                 onChange={ changeHandler }
-                                value={ newAlgo.quote }
+                                value={ newAlgo.code }
                                 placeholder="Javascript"
                             />
                         </div>

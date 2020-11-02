@@ -40,6 +40,7 @@ const AlgoSchema = mongoose.Schema({
 
     code: {
         type: String,
+        required: [true,"A code is a required field." ],
     },
 
 },   { timestamps: true });

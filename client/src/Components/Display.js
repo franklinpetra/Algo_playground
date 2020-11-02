@@ -21,7 +21,7 @@ const Display = props => {
 
 
     const getAllAlgos = () => {
-        axios.get("http://localhost:8000/api/algos")
+        axios.get("http://localhost:8000/api/allalgos")
             .then(response => {
                 setAllAlgos((response.data.results).sort((b,a) => (b.name > a.name) ? 1: -1));
             });

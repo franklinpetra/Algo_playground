@@ -29,11 +29,9 @@ function App() {
         </Router>
         <header className="text-center" style={{margin:"4% 0% 20% 0%", height:"75px", width:"100%"}}>
           <Link to="/">Visualizer</Link> |&nbsp;
-          <Link to="/algos/">Our Algo Collection</Link>  |&nbsp;
+          <Link to="/algos/allalgos">Our Algo Collection</Link>  |&nbsp;
           <Link to="/algos/5f2445a4784acd0598b11ece/newAlgo">Add an Algo</Link> |&nbsp;
-          <Link to="/pathfinder">Playground</Link> |&nbsp;
-          <Link to="/pathfinder">Playground</Link> |&nbsp; 
-          <Link to="/pathfinder">Playground</Link> |&nbsp;        
+          <Link to="/pathfinder">Playground</Link> |&nbsp;       
           <Link to="/one/">Random Algo</Link> |&nbsp;
           <Link to="/new">Login</Link><br></br>
         </header><br></br>
