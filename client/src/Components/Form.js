@@ -4,9 +4,9 @@ import axios from 'axios';
 
 const Form = props => {
     const { action } = props;
-    const [newErrors, setNewErrors] = useState([])
-    const [data, setData] = useState([])
-    const [user, setUser] = useState([])
+    // const [newErrors, setNewErrors] = useState([])
+    // const [data, setData] = useState([])
+    // const [user, setUser] = useState([])
     const [newUser, setNewUser] = useState({
         firstName: "",
         lastName: "",

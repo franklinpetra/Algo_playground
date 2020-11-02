@@ -23,13 +23,13 @@ module.exports = {
     updateUser : (req, res) => {
         User.findOneAndUpdate({_id: req.params.id}, req.body, { runValidators:true, new: true })
             .then(updatedUser => res.json({ message: "Success!", results: updatedUser }))
-            .catch(error => res.json({ message: "Houston, we have an update problem!", results: err }))
+            .catch(err => res.json({ message: "Houston, we have an update problem!", results: err }))
     },
 
     deleteUser : (req, res) => {
         User.deleteOne({ _id: req.params.id })
             .then(deletedUser => res.json({ message: "Success!", results: deletedUser }))
-            .catch(error => res.json({ message: "Houston, we have a deletion problem!", results: err }))
+            .catch(err => res.json({ message: "Houston, we have a deletion problem!", results: err }))
     },
 
         // CRUD for Algos //
@@ -43,7 +43,6 @@ module.exports = {
             .then(userWithNewAlgo => res.json({ message: "Success!", results: userWithNewAlgo }))
             .catch(err => res.json({ message: "Error", results: err }));
     },
-
     deleteAlgo: (req,res) => {
         User.findOneAndUpdate({ _id: req.params.id }, { $pull: { algos: { _id: req.params.pid } } }, { new: true })
         .then(userWithOneLessAlgo => res.json({ message: "Success!", results: userWithOneLessAlgo}))
@@ -51,7 +50,7 @@ module.exports = {
     },
     oneAlgo: (req,res) => {
         User.find({ "algo._id": req.params.pid })
-        .then(oneoneAlgo => res.json({ message: "Success!", results: oneAlgo}))
+        .then(oneAlgo => res.json({ message: "Success!", results: oneAlgo}))
         .catch(err => res.json({ message: "Error", results: err }));
     },
     updateAlgo: (req,res) => {

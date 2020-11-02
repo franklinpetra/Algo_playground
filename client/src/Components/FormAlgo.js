@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, navigate } from '@reach/router';
+import { navigate } from '@reach/router';
 import axios from 'axios';
 
 const FormAlgo = props => {
@@ -306,7 +306,7 @@ const FormAlgo = props => {
                             />
                         </div>
                         <div className="form-group col-xs-6">
-                            <input type="submit" value="Update" action="update" className="col-md-6 btn btn-primary" style={{margin:"0% 0% 0% 45%"}}/><br></br>
+                            <input type="submit" value="Update" action="submitHandler" className="col-md-6 btn btn-primary" style={{margin:"0% 0% 0% 45%"}}/><br></br>
                             <p style={{color:"grey"}}>{ formMessage() }</p>
                         </div>
                     </div>

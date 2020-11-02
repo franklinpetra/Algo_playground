@@ -7,7 +7,6 @@ const Display = props => {
     const [allAlgos, setAllAlgos] = useState([]);
     const [algos, setAlgos] = useState([]);
     
-
     const getAll = () => {
         axios.get("http://localhost:8000/api/algos/all")
             .then(response => {
@@ -19,16 +18,15 @@ const Display = props => {
             getAll();
         }, []);
 
-
-    const getAllAlgos = () => {
-        axios.get("http://localhost:8000/api/allalgos")
-            .then(response => {
-                setAllAlgos((response.data.results).sort((b,a) => (b.name > a.name) ? 1: -1));
-            });
-    }
-        useEffect(() => {
-            getAllAlgos();
-        }, []);
+    // const getAllAlgos = () => {
+    //     axios.get("http://localhost:8000/api/allalgos")
+    //         .then(response => {
+    //             setAllAlgos((response.data.results).sort((b,a) => (b.name > a.name) ? 1: -1));
+    //         });
+    // }
+    //     useEffect(() => {
+    //         getAllAlgos();
+    //     }, []);
 
     
     const deleteHandler = (id) => {
@@ -43,7 +41,7 @@ const Display = props => {
             <div style={{ margin:"5% 2% 4% 2%"}}>
             <div style={{margin:"2% 0% 0% 0%", backgroundColor:"brown", color:"black"}}><br></br>
                 <h1 style={{margin:"6% 0% 0% 0%",  backgroundColor:"brown"}}>Collection</h1>
-                <Link to={ `/users/5f2445a4784acd0598b11ece/new` }><button className="col-sm-2 btn btn-success" style={{margin:"2% 0% 1% 50%"}} >Add Algo</button></Link>
+                <Link to="/algos/5f2445a4784acd0598b11ece/newAlgo"><button className="col-sm-2 btn btn-success" style={{margin:"2% 0% 1% 50%"}} >Add Algo</button></Link>
             </div>
             <div className="container" style={{ alignItems:"left" }}><br></br>
                 <div className="row">
@@ -58,14 +56,20 @@ const Display = props => {
                                         <div className="row">
                                             <div className="col-md-4 container"><br></br>
                                                 <img src={ algo.image } alt={algo.name} style={{ margin:"7% 0% 2% 3%"}} class="card-img" alt={algo.name}/>
-                                                <p class="card-text"><small class="text-muted">{ algo.quote }</small></p><br></br>
+                                                <p class="card-text block-quote"  style={{lineHeight:"98%"}}> <small class="text-muted" >{ algo.quote }</small></p><br></br>
                                             </div>
                                             <div className="col-md-8 container">
                                                 <div className="card-body">
-                                                <h1 className="card-title text-center">{algo.name}</h1>
-                                                    <p class="card-text"><small class="text-muted">{ algo.desc } with { algo.best } best case and { algo.worst } worst case and { algo.aver } aver case.</small></p>
-                                                    <Link to={ `/users/${algo._id}/algo id here`}><button className="btn btn-primary btn-sm" style={{margin:"0% 0% 0% 5%"}}>View Algo</button></Link>&nbsp;
-                                                    <button onClick={ () => deleteHandler(user._id)(algo._id) } className="btn btn-danger btn-sm" style={{margin:"0% 0% 0% 0%"}}>Delete the Algo</button>
+                                                <h1 className="card-title block-quote" >{algo.name}</h1>
+                                                    <p class="card-text block-quote" ><small class="text-muted" >{ algo.desc }</small></p>
+                                                    <ul class="text-muted" style={{listStyleType:"none", fontSize:"12px", textAlign:"right"}}>
+                                                        <li>Best Case { algo.best }</li>
+                                                        <li>Worst Case { algo.worst }</li> 
+                                                        <li>Average Case { algo.aver }</li>
+                                                    </ul><br></br>
+                                                    <Link to={ `/users/${algo._id}/algo id here`}><button className="btn btn-primary btn-sm" style={{margin:"0% 0% 0% 5%"}}>View Algo</button></Link>
+                                                    &nbsp; &nbsp;
+                                                    <button onClick={ () => deleteHandler(user._id)(algo._id) } className="btn btn-danger btn-sm" style={{margin:"0% 0% 0% 0%"}}>Delete Algo</button>
                                                 </div>
                                             </div>
                                             
