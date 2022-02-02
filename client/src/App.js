@@ -18,7 +18,7 @@ function App() {
           <h5 style={{margin:"20px 0px 0px 0px", color:"grey"}}>A full stack Javascript Project using Mongoose, 
             </h5>
             <h5 style={{margin:"0px 0px 0px 0px", color:"grey"}}>Express, React, and Node to explore Algorithms. </h5>
-            <p style={{margin:"5px 0px 0px 0px", color:"grey"}}>By Petra Franklin and Tash Elijah Dutton</p><br></br>
+            <p style={{margin:"5px 0px 0px 0px", color:"grey"}}>By Petra Franklin</p><br></br>
         </div>
         <Router>
           <Visualizer path="/"/>
