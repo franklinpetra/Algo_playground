@@ -15,10 +15,9 @@ function App() {
       <div className="App">
       <div>
           <h1 style={{margin:"40px 0px 0px 0px"}}>Algorithm Visualizer</h1>
-          <h5 style={{margin:"20px 0px 0px 0px", color:"grey"}}>A full stack Javascript Project using Mongoose, 
-            </h5>
-            <h5 style={{margin:"0px 0px 0px 0px", color:"grey"}}>Express, React, and Node to visualize sorting algorithms</h5>
-            <h5 style={{margin:"0px 0px 0px 0px", color:"grey"}}> and create collections. Feel free to make a personal account with your favorite algorithms. </h5>
+          <h5 style={{margin:"20px 0px 0px 0px", color:"grey"}}>A full stack Javascript Project using Mongoose, Express, React, </h5>
+            <h5 style={{margin:"0px 0px 0px 0px", color:"grey"}}>and Node to visualize sorting algorithms and create collections.</h5>
+            <h5 style={{margin:"0px 0px 0px 0px", color:"grey"}}>Feel free to open a personal account with your favorite algorithms. </h5>
             <p style={{margin:"5px 0px 0px 0px", color:"grey"}}>By Petra Franklin</p><br></br>
         </div>
         <Router>
