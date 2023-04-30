@@ -8,4 +8,4 @@ mongoose.connect("mongodb://localhost/algosdb", {
     useUnifiedTopology: true,
 })
     .then(() => console.log("Houston! Machine Database to Machine Client and Homosapien input. Communication has been established!"))
-    .catch(err => console.log("Houston! Disaster! Our databaase is on the blitz!", err))
+    .catch(err => console.log("Houston! Disaster! Our database is on the blitz!", err))
